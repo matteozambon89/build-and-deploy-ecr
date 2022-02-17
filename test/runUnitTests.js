@@ -36,7 +36,7 @@ describe("lib.runUnitTest", () => {
 
     const dockerRunArgs = execStub.getCall(0).args[1];
 
-    expect(dockerRunArgs.includesInOrder("myimage:latest", "npm test")).to.be.true;
+    expect(dockerRunArgs.includesInOrder("myimage:latest", "npm", "test")).to.be.true;
   });
 
   it("adds an env file if specified in inputs", async () => {
